@@ -46,6 +46,16 @@ $(function(){
     //     }
     
     // })
+    $(".shousuo2").click(function () {
+        var val = $('.inpt2').val()
+        console.log(val)
+        if($('.inpt2').val() == ''){
+            alert("搜索不能为空");
+        }else{
+            location.href = "shousuo_list.html?val=" + val;
+        }
+    
+    })
 
     $(".list_ul").on("click", "li", function () {
         // var uid = this.getAttribute('data-id');  

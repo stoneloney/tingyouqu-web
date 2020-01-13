@@ -1,0 +1,69 @@
+
+/* 第二段 */
+.trunk{
+    width: 100%;
+    height: 640px;
+}
+.trunk2{
+    width: 1205px;
+    margin: auto;
+}
+.headline{
+    text-align: center;
+    font-size:26px;
+font-family:Microsoft YaHei;
+font-weight:400;
+margin-top: 60px;
+color:rgba(3,18,54,1)
+
+}
+.xian{
+    margin: auto;
+    width:50px;
+    height:2px;
+    background:rgba(0,0,0,1);
+    margin-top: 20px; 
+}
+.h4{
+    text-align: center; 
+    font-size:18px;
+font-family:Arial;
+font-weight:400;
+color:rgba(3,18,54,1);
+margin-top: 14px;
+}
+.introduce{
+    width: 1205px;
+    height: 280px;
+    margin-top: 40px;
+}
+.introduce_tex {
+    margin-left: 29px;
+    width: 676px;
+    font-size:15px;
+font-family:Microsoft YaHei;
+font-weight:400;
+color:rgba(3,18,54,1)
+}
+.tex1{
+    font-size:20px;
+    margin-top: 10px;
+}
+.tex2{
+    line-height:32px;
+    margin-top: 20px;
+}
+.tex3{
+    line-height:32px;
+    margin-top: 30px;
+}
+/* 地图 */
+.map{
+    width: 100%;
+    height: 740px;
+}
+.map img{
+    width: 100%;
+    height: 740px;
+}
+

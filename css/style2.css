@@ -1,0 +1,135 @@
+/* 头部 */
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    height: 100%;
+    width: 100%;
+    font-family:Microsoft YaHei;
+}
+.login a{
+    color: #fff;
+}
+
+.mian{
+    position: relative;
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+}
+.hed{
+    position: fixed;
+    /* top: 50; */
+    top: 0;
+    width: 100%;
+    height: 80px;
+    background: #03123600;
+    z-index: 999;
+
+}
+.input{
+    overflow: hidden;
+    margin-top: 23px;
+    margin-left: 20px;
+    width:280px;
+height:34px;
+background:rgba(255,255,255,1);
+border-radius:4px;
+}
+.input input{
+    height: 34px;
+    width: 228px;
+    margin-left: 15px;
+
+}
+.input div{
+    height: 34px;
+    width: 32px;
+    display: inline-block;
+    text-align: center;
+}
+.logo img{
+    width: 100%;
+    margin-top: 20px;
+    margin-left: 40px;
+    width: 85px;
+    height: 40px;
+}
+.reg{
+    margin-right: 40px;
+    margin-top: 25px;
+    font-size: 14px;
+    font-weight:400;
+color:rgba(255,255,255,1);
+}
+.reg div{
+    display: inline-block;
+    
+}
+.login{
+    margin-right: 42px;
+}
+.biaoti{
+    position: absolute;
+    top: 160px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 99;
+    width: 100%;
+    text-align: center;
+    font-family:Microsoft YaHei;
+    color:rgba(255,255,255,1);
+    font-weight:400;
+}
+.biaoti1{
+    font-size:60px;
+}
+.mien{
+    width: 97px;
+    height: 30px;
+    border: 1px solid ;
+    line-height: 30px;
+    text-align: center;
+}
+.mien a{
+    font-size:14px;
+font-family:Microsoft YaHei;
+font-weight:400;
+color:rgba(255,255,255,1);
+}
+
+/* 轮播图 */
+/* #shishang .main{
+    width: 100%;
+    clear: both;
+} */
+.slide{
+    height: 400px;
+    /* min-width: 990px; */
+    width: 100%;
+    position: relative;
+    z-index: 0;
+}
+.slide .pb-carouselWarp {
+    position: relative;
+    height: 400px; 
+    overflow: hidden;
+    background-size: cover;
+}
+
+.slide .pb-carouselWarp li img{
+    cursor: pointer;
+    background-repeat: no-repeat;
+    height: 400px;
+    width: 100%;
+}
+.slide .pb-carouselWarp li{
+    margin: auto;
+}
+
+.list_h1{
+    font-size:26px;
+font-weight:400;
+color:rgba(3,18,54,1);
+}

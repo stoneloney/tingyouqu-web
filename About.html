@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>关于我们</title>
+    <link rel="stylesheet" href="css/About.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style2.css">
+        <!-- 登录弹窗 -->
+        <link rel="stylesheet" href="css/g.css">
+</head>
+
+<body>
+
+    <div class="mian">
+        <div class="hed navbar">
+            <div class="logo fl"> <a href="index.html"><img src="images/logo.png" alt=""></a></div>
+            <div class="input fl">
+                <input type="text" placeholder="上万种航海产品，等你来搜！">
+                <div class="shousuo"> <img src="images/sousuo3.png" alt=""></div>
+
+            </div>
+            <div class="reg fr">
+                <!-- <div class="login" id="btn_showlogin">
+                    <a href="javascript:;" class="evaluate-btn">登录</a>
+                   
+                </div> -->
+                <div class="mien"><a href="About.html">关于我们</a></div>
+            </div>
+        </div>
+        <div class="biaoti" >
+            <div class="biaoti1">关于我们</div>
+        </div>
+
+        <!-- style="height: 300px;"
+        style="top: 120px;" -->
+        <!-- 轮播图 -->
+        <div class="slide" id="slide">
+            <div class="pb-carouselWarp demo1">
+                <ul class="pb-carousel">
+                    <li class="pb-this">
+                        <img  src="images/guanyuwomen.png" alt="" />
+                    </li>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <!--  -->
+    <div class="trunk">
+        <div class="trunk2">
+            <div class="headline">公司介绍</div>
+            <div class="xian"></div>
+            <h4 class="h4">Company introduction</h4>
+
+            <div class="introduce">
+                <div class="introduce_img fl">
+                    <img src="images/lou.png" alt="">
+                </div>
+                <div class="introduce_tex fl">
+                    <div class="tex1">深圳市艇有趣科技有限公司</div>
+                    <div class="tex2">
+                        艇有趣创立于1987年，是全球领先的ICT（信息与通信）基础设施和智能终端提供商，我们致力于把数字世界带入每个人、每个家庭、每个组织，构建万物互联的智能世界。目前华为有19.4万员工，业务遍及170多个国家和地区，服务30多亿人口。
+                    </div>
+                    <div class="tex3">
+                        我们在通信网络、IT、智能终端和云服务等领域为客户提供有竞争力、安全可信赖的产品、解决方案与服务，与生态伙伴开放合作，持续为客户创造价值，释放个人潜能，丰富家庭生活，激发组织创新。华为坚持围绕客户需求持续创新，加大基础研究投入，厚积薄发，推动世界进步。
+                    </div>
+                </div>
+            </div>
+
+            <div class="headline" style="margin-top:99px;">联系我们</div>
+            <div class="xian"></div>
+            <h4 class="h4">Contact us</h4>
+        </div>
+    </div>
+
+    <div class="map">
+        <img src="images/map.png" alt="">
+    </div>
+
+<!-- 底部 -->
+    <!-- <div class="boutt"></div> -->
+    <div class="bottom">
+        <div class="base">
+            <ul class="bot1 bot2">
+                <li class="h2">联系方式</li>
+                <li>电话：188-1436-5878</li>
+                <li>地址：深圳市南山区粤海街道高新南环路</li>
+            </ul>
+            <ul class="bot1">
+                <li class="h2">关于我们</li>
+                <li>公司简介</li>
+                <li>联系我们</li>
+            </ul>
+            <ul class="bot3">
+                <li class="h3"><img src="images/ewm.png" alt=""></li>
+                <li>微信公众号</li>
+            </ul>
+        </div>
+
+    </div>
+    <div class="bottom3"></div>
+    <div class="bottom2">
+        <div class="beian">Copyright© 2017 深圳市艇有趣科技有限公司 保留所有版权 备案号：粤ICP备18080471号</div>
+    </div>
+
+
+</body>
+<script src="js/jquery-1.10.1.min.js"></script>
+<script src="js/zhezao.js"></script>
+<script src="js/shousuo.js"></script>
+<script>
+    $(".boutt").load("/html/boutt.html");
+    $().ready(function(){
+                $(window).scroll(function(){
+                    var top = $("#slide").offset().top;//根据id获取指定的位置
+                    var scrollTop = $(window).scrollTop();//获取当前滑动的位置
+                    if(scrollTop > top){
+                        $(".navbar").addClass("active");
+                    }else{
+                        $(".navbar").removeClass("active");
+     
+                    }
+     
+                })
+            })
+         
+    </script>
+</html>

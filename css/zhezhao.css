@@ -1,0 +1,46 @@
+.img-title{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 360px;
+    height: 180px;
+    font-size:14px;
+font-family:Microsoft YaHei;
+font-weight:400;
+color:rgba(255,255,255,1);
+    z-index: 999;
+    background:rgba(0,8,25,1);
+opacity:0.8;
+    display: none;
+    transition: all 2si 5s linear;
+  }
+  .img-title img{
+      position: absolute;
+      width: 28px;
+      height: 28px;
+      top: 61px;
+      left: 165px;
+  }
+  .img-title div{
+      width: 142px;
+      text-align: center;
+    position: absolute;
+    bottom: 65px;
+    left: 109px;
+  }
+
+.img:hover .img-title{
+    transition: all 2si 5s linear;
+    display: block;
+    
+  }
+  .img:hover .name{
+      display: none;
+  }
+  .navbar{
+    box-shadow: none;
+    /* background:#031236 */
+}
+.navbar.active{
+ background:#031236;
+}

@@ -1,0 +1,161 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
+}
+.main-content{
+    width: 100%;
+}
+
+/*main CSS*/
+#pictureViewer{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background:rgba(0, 0, 0, 0.800);
+
+    z-index: 10000;
+}
+#pictureViewer > .content{
+    /* background-color: #fff; */
+    position: absolute;
+    width: 1200px;
+    height: 570px;
+    margin: auto;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 9999;
+}
+#pictureViewer .menu-bar{
+    width: 100%;
+}
+#pictureViewer .menu-bar .handel{
+    position: absolute;
+    right: 0;
+    width: 40px;
+    height: 40px;
+    /* float: right; */
+    background-repeat: no-repeat;
+    background-position: 50%;
+    cursor: pointer;
+    z-index: 99999;
+     margin-right: -350px;
+    margin-top: -160px; 
+}
+
+#pictureViewer .menu-bar .handel.close-view{
+    background-image: url(/images/close_black.png);
+    z-index: 999;
+    background-size: 15px;
+}
+
+#pictureViewer .handel-prev{
+    position: absolute;
+    left: 0;
+    margin-left: -60px;
+}
+#pictureViewer .handel-prev,
+#pictureViewer .handel-next{
+    display: inline-block;
+    width: 23px;
+    height: 42px;
+ 
+    position: absolute;
+    /* position: relative; */
+    top: calc(50% - 80px);
+    background-repeat: no-repeat;
+    background-size: 25px;
+    background-position: 50%;
+    cursor: pointer;
+    z-index: 99999;
+    -webkit-transition: all .3s;
+    -moz-transition: all .3s;
+    -ms-transition: all .3s;
+    -o-transition: all .3s;
+    transition: all .3s;
+}
+#pictureViewer .handel-prev{
+    background-image: url(/images/prev_blank.png);
+}
+#pictureViewer .handel-next{
+    background-image: url(/images/next_blank.png);
+    right: 0;
+    margin-right: -60px;
+}
+/* #pictureViewer .handel-prev:hover,
+#pictureViewer .handel-next:hover{
+    background-color: #ff2e67;
+} */
+/* #pictureViewer .handel-prev:hover{
+    background-image: url(../images/icons/prev_white.png);
+}
+#pictureViewer .handel-next:hover{
+    background-image: url(../images/icons/next_white.png);
+} */
+#pictureViewer .picture-content{
+    display: inline-block;
+    width: 1200px;
+    height: calc(100% - 80px);
+    position: absolute;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+}
+#pictureViewer .picture-content img{
+    width: 1200px;
+    height: 570px;
+}
+#pictureViewer .picture-content .cover{
+    position: absolute;
+    margin: auto;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+#pictureViewer .counter{
+    position: absolute;
+    bottom: 0;
+    height: 40px;
+    line-height: 40px;
+    width: 100%;
+
+    margin-bottom: -35px;
+    text-align: center;
+    font-size:20px;
+    font-family:Microsoft YaHei;
+    font-weight:400;
+    color:rgba(255,255,255,1);
+}
+#pictureViewer .hide{
+    display: none;
+}
+#pictureViewer .left{
+    float: left;
+}
+#pictureViewer .right{
+    float: right;
+}
+#pictureViewer .clear-flex{
+    clear: both;
+}
+#pictureViewer img{
+    max-width: 100%;
+    max-height: 100%;
+}

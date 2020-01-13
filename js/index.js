@@ -50,7 +50,7 @@ $(function(){
         var val = $('.inpt2').val()
         console.log(val)
         if($('.inpt2').val() == ''){
-            alert("搜索不能为空");
+            // alert("搜索不能为空");
         }else{
             location.href = "shousuo_list.html?val=" + val;
         }

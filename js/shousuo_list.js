@@ -30,8 +30,10 @@ $(function () {
                 $(".list_h2").html(val);
                 if(res.data.length <1){
                     $(".list_h1").html('没有相关产品哦~').css({ "text-align":"center",'font-size': '16px','margin-top': '50px'});
+                    $("#page").css('display', 'none')
    
                 }else{
+                    $("#page").css('display', 'block')
                     create1(res)
                     pagecount = res.count
                     $(".list_h1").html(val);

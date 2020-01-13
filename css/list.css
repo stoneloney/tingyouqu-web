@@ -193,7 +193,7 @@ input[type='checkbox'] {
 }
 
 .checkBox input[type=checkbox]:checked {
-    background: url("images/checkbox_icon.png")no-repeat center;
+    background: url('../images/checkbox_icon.png')no-repeat center;
 }
 
 .checkBox:nth-child(1) {
@@ -288,7 +288,7 @@ color: #fff;
     display: inline-block;
     width: 11px;
     height: 20px;
-    background: url(images/gdxiala.png) #fff no-repeat 0 12px;
+    background: url('../images/gdxiala.png') #fff no-repeat 0 12px;
 }
 
 /* 点击渲染 */

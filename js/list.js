@@ -101,8 +101,8 @@ $(function () {
                 .css('color', 'rgba(13, 94, 255, 1)')
                 .parent().parent().siblings('').find('.option_name').find('.id_name').css('color', 'rgba(3,18,54,1)')
             $('.back_img').eq($(this).parent().index())
-                .css('background', 'url(/images/gdxiala2.png) #fff no-repeat 0 12px')
-                .parent().parent().siblings('').find('.option_name').find('.back_img').css('background', 'url(/images/gdxiala.png) #fff no-repeat 0 12px')
+                .css('background', 'url(images/gdxiala2.png) #fff no-repeat 0 12px')
+                .parent().parent().siblings('').find('.option_name').find('.back_img').css('background', 'url(images/gdxiala.png) #fff no-repeat 0 12px')
             $('.xuanxian').eq($(this).parent().index())
                 .show()
                 .parent().siblings().find('.xuanxian')
@@ -113,7 +113,7 @@ $(function () {
             cID = id
             nameval = name
         } else {
-            $('.back_img').css('background', 'url(/images/gdxiala.png) #fff no-repeat 0 12px')
+            $('.back_img').css('background', 'url(images/gdxiala.png) #fff no-repeat 0 12px')
             $('.id_name').css('color', 'rgba(3,18,54,1)')
             $(".xuanxian").hide();
             $(".xuanxian2").css('display', 'none')
@@ -123,7 +123,7 @@ $(function () {
     });
     $(".option_cd").click(function (e) {
         $(".xuanxian").hide();
-        $('.back_img').css('background', 'url(/images/gdxiala.png) #fff no-repeat 0 12px')
+        $('.back_img').css('background', 'url(images/gdxiala.png) #fff no-repeat 0 12px')
         $('.id_name').css('color', 'rgba(3,18,54,1)')
 
         if ($(".xuanxian2").css("display") == "none") {
@@ -199,14 +199,14 @@ $(function () {
                 elem = elem.parentNode;
             }
             $('.xuanxian').css('display', 'none');
-            $('.back_img').css('background', 'url(/images/gdxiala.png) #fff no-repeat 0 12px')
+            $('.back_img').css('background', 'url(images/gdxiala.png) #fff no-repeat 0 12px')
             $('.id_name').css('color', 'rgba(3,18,54,1)')
             $(".xuanxian2").hide();
         }
     });
 
 $(".quxiao").click(function(){
-    $('.back_img').css('background', 'url(/images/gdxiala.png) #fff no-repeat 0 12px')
+    $('.back_img').css('background', 'url(images/gdxiala.png) #fff no-repeat 0 12px')
     $('.id_name').css('color', 'rgba(3,18,54,1)')
     $(".xuanxian").hide();
     $(".xuanxian2").css('display', 'none')
@@ -215,7 +215,7 @@ $(".quxiao").click(function(){
 // var selecname = {}
     //点击筛选功能
     $(".queding").click(function () {
-        $('.back_img').css('background', 'url(/images/gdxiala.png) #fff no-repeat 0 12px')
+        $('.back_img').css('background', 'url(images/gdxiala.png) #fff no-repeat 0 12px')
         $('.id_name').css('color', 'rgba(3,18,54,1)')
         $(".xuanxian").hide();
         $(".xuanxian2").css('display', 'none')

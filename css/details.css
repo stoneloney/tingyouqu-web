@@ -272,9 +272,17 @@ overflow: hidden;
 margin-bottom: 35px;
 }
 .model_a{
+ 
     overflow: hidden;
 color:rgba(151,161,180,1);
 line-height:36px;
+
+}
+.model_a li{
+    width: 102px;
+    overflow:hidden;
+text-overflow:ellipsis; 
+white-space:nowrap;
 }
 .model_b{
     margin-left: 53px;

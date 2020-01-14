@@ -20,7 +20,11 @@ color:rgba(3,18,54,1);
 .navigator p{
  float: left;
 }
-
+.sy{
+    font-size:13px;
+font-weight:400;
+color:rgba(3,18,54,1);
+}
 .product{
     margin-top: 45px;
     /* height: 855px; */
@@ -45,9 +49,9 @@ color:rgba(3,18,54,1);
     overflow: hidden;
     position: relative;
      width: 850px;
-    /* height: 290px; */
+    height: 290px;
 }
-.tupian_a 
+
 /* 遮罩 */
 .img-title{
     position: absolute;
@@ -80,35 +84,68 @@ opacity:0.8;
     left: 109px;
     font-size:12px
   }
-
+.cover{
+    /* position: relative;
+    bottom: 0; */
+    float: left;
+}
 .tupian_a .cover:nth-child(1):hover .img-title{
     transition: all 2si 5s linear;
     display: block;
   }
-  .tupian_a .cover:nth-child(2) img{
+  .tupian_a .cover:nth-child(1) img{
+    width: 360px;
+    height: 290px;
+  }
+  .tupian_a .cover:nth-child(1){
+    width: 360px;
+    height: 290px;
+  }
+  .tupian_a .cover:nth-child(2){
     width: 80px;
     height: 80px;
     margin-left: 30px;
+    margin-top: 210px;
+  }
+  .tupian_a .cover:nth-child(3){
+    width: 80px;
+    height: 80px;
+    margin-left: 5px;
+    margin-top: 210px;
+  }
+  .tupian_a .cover:nth-child(4){
+    width: 80px;
+    height: 80px;
+    margin-left: 5px;
+    margin-top: 210px;
+  }
+  .tupian_a .cover:nth-child(5){
+    width: 80px;
+    height: 80px;
+    margin-left: 5px;
+    margin-top: 210px;
+  }
+  .tupian_a .cover:nth-child(2) img{
+    width: 80px;
+    height: 80px;
+
   }
   .tupian_a .cover:nth-child(3) img{
     width: 80px;
     height: 80px;
-    margin-left: 5px;
+   
   }
   .tupian_a .cover:nth-child(4) img{
     width: 80px;
     height: 80px;
-    margin-left: 5px;
   }
   .tupian_a .cover:nth-child(5) img{
     width: 80px;
     height: 80px;
-    margin-left: 5px;
   }
 .vdimg{
     width: 80px;
     height: 80px;  
-    margin-left: 5px;
 }
 .explain_a{
     /* margin-left: 30px; */

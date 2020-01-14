@@ -60,7 +60,7 @@ table, caption, tbody, tfoot, thead, tr, th, td {
 }
 
 #pictureViewer .menu-bar .handel.close-view{
-    background-image: url(/images/close_black.png);
+    background-image: url(../images/close_black.png);
     z-index: 999;
     background-size: 15px;
 }
@@ -91,10 +91,10 @@ table, caption, tbody, tfoot, thead, tr, th, td {
     transition: all .3s;
 }
 #pictureViewer .handel-prev{
-    background-image: url(/images/prev_blank.png);
+    background-image: url(../images/prev_blank.png);
 }
 #pictureViewer .handel-next{
-    background-image: url(/images/next_blank.png);
+    background-image: url(../images/next_blank.png);
     right: 0;
     margin-right: -60px;
 }

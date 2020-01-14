@@ -57,19 +57,21 @@ $(function () {
     }
  
     function image_list(res) {
-        // var image_list = []
-        var list_img = res.data.product[0].images
-        // for (var i = 0; i < list_img.length; i++) {
+        var image_list = []
+        var list_img = res.data.product[0].images.slice(0,4)
+        for (var i = 0; i < list_img.length; i++) {
 
-        //     image_list = list_img.slice(1)
-        // }
+            image_list = list_img
+        }
+        // console.log(list_img.slice(4))
+        console.log(res)
         console.log(list_img)
         var image_list = list_img.map(function (item) {
-
+            console.log(item)
             return `          <div class="cover">
             <img class="tupian" src="http://118.25.191.234${item}" alt="">
             <div class="img-title">
-                <img src="images/suosuo2.png" alt="">
+                <img style="width: 28px;height: 28px;" src="images/suosuo2.png" alt="">
                 <div>查看图片</div>
             </div>
 
@@ -93,12 +95,25 @@ $(function () {
     function params(res){
         var params = res.data.params
         console.log(params);
+
+        var productsParams = {};
+        for (var i in params) {
+          console.log(typeof(params[i]));
+          productsParams[i] = []
+        //   for (var j = 0, len = params[i].length; j < len; j++) {
+            // console.log(j);
+           productsParams[i].push(params[i] == "null" || params[i] == "" ? '--' : params[i])
+     
+        //  }
+        }
+        console.log(productsParams);
+
         con = "";
         coc= ""
-             $.each(params, function(index, item){
+             $.each(productsParams, function(index, item){
                con += "<li>"+index+"</li>";
             });
-            $.each(params, function(index, item){
+            $.each(productsParams, function(index, item){
                 coc += "<li>"+item+"</li>";
              });
             $(".model_a").html(con); //把内容入到这个div中即完成

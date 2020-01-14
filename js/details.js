@@ -58,7 +58,7 @@ $(function () {
  
     function image_list(res) {
         var image_list = []
-        var list_img = res.data.product[0].images.slice(0,4)
+        var list_img = res.data.product[0].images.slice(0,8)
         for (var i = 0; i < list_img.length; i++) {
 
             image_list = list_img

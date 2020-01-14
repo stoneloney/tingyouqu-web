@@ -54,9 +54,9 @@ table, caption, tbody, tfoot, thead, tr, th, td {
     background-repeat: no-repeat;
     background-position: 50%;
     cursor: pointer;
-    z-index: 99999;
-     margin-right: -350px;
-    margin-top: -160px; 
+    z-index: 999;
+     margin-right: -100px;
+    margin-top: -60px; 
 }
 
 #pictureViewer .menu-bar .handel.close-view{

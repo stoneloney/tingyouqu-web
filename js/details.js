@@ -125,7 +125,8 @@ $(function () {
         url: "http://118.25.191.234/tingyouqu/product/guess",
         dataType: "json",
         data: {
-            id: uid
+            id: uid,
+            plat:'web'
         },
         success: function (res) {
             // console.log(res);
@@ -137,7 +138,7 @@ $(function () {
                 return `     <li data-id="${item.id}">
                 <img src="http://118.25.191.234${img}" alt="">
                 <p>${item.name}</p>
-                <p>ECO-TENDER</p>
+                <p>${item.brandName}</p>
                     </li>`;
             }).join("");
             // console.log(rel);

@@ -111,6 +111,7 @@ table, caption, tbody, tfoot, thead, tr, th, td {
 #pictureViewer .picture-content{
     display: inline-block;
     width: 1200px;
+    height: 570px;
     height: calc(100% - 80px);
     position: absolute;
     margin: 0 auto;
@@ -118,8 +119,12 @@ table, caption, tbody, tfoot, thead, tr, th, td {
     right: 0;
 }
 #pictureViewer .picture-content img{
-    width: 1200px;
-    height: 570px;
+    /* width: 1200px;
+    height: 570px; */
+    width: auto;
+	height: auto;
+	max-width: 100%;
+	max-height: 100%;
 }
 #pictureViewer .picture-content .cover{
     position: absolute;

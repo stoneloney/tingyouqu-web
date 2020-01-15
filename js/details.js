@@ -8,6 +8,7 @@ $(function () {
     var name = $.getUrlParam('name');
     var resc = location.search.slice(1);
     console.log(name)
+    console.log(uid)
     $(".list_h2").html(name+">");
     $.ajax({
         type: "get",
@@ -124,7 +125,7 @@ $(function () {
         url: "http://118.25.191.234/tingyouqu/product/guess",
         dataType: "json",
         data: {
-            id: 1
+            id: uid
         },
         success: function (res) {
             // console.log(res);
@@ -149,7 +150,7 @@ $(function () {
         // var uid = this.getAttribute('data-id');  
         var uid = $(this).attr("data-id");
         // console.log(uid);
-        location.href = "details.html?id=" + uid;
+        location.href = "details.html?id=" + uid+"&name=" +name;
 
     })
     //数据渲染

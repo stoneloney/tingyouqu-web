@@ -74,7 +74,7 @@ $(function () {
         // var uid = this.getAttribute('data-id');  
         var uid = $(this).attr("data-id");
         // console.log(uid);
-        location.href = "details.html?id=" + uid;
+        location.href = "details.html?id=" + uid+"&name=" +val;
 
     })
 })

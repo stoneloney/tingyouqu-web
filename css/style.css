@@ -5,6 +5,7 @@
     position: absolute;
     bottom: 0;
 } */
+html,body{height:auto}
 .bottom{
  
     height: 181px;
@@ -89,4 +90,4 @@ color:rgba(128,139,163,1);
 /* 顶部滑动 */
 .navbar.active{
     background:#031236;
-   }
+}

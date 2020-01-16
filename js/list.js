@@ -94,6 +94,8 @@ $(function () {
     var cID
     var nameval
     $(".option_name").click(function (e) {
+        $(".option_cd").find('.back_img').css('background', 'url("images/gdxiala.png") #fff no-repeat 0 12px')
+        $(".option_cd").find('.id_name').css('color', 'rgba(3,18,54,1)')
 
         if ($(".xuanxian").eq($(this).parent().index()).css("display") == "none") {
 
@@ -123,15 +125,18 @@ $(function () {
     });
     $(".option_cd").click(function (e) {
         $(".xuanxian").hide();
-        $('.back_img').css('background', 'url("images/gdxiala.png") #fff no-repeat 0 12px')
-        $('.id_name').css('color', 'rgba(3,18,54,1)')
+        $('.option_name').find('.id_name').css('color', 'rgba(3,18,54,1)')
+        $('.option_name').find('.back_img').css('background', 'url("images/gdxiala.png") #fff no-repeat 0 12px')
 
         if ($(".xuanxian2").css("display") == "none") {
             $('.xuanxian2').css('display', 'block')
+            $(".option_cd").find('.back_img').css('background', 'url("images/gdxiala2.png") #fff no-repeat 0 12px')
+            $(".option_cd").find('.id_name').css('color', 'rgba(13, 94, 255, 1)')
 
         } else {
             $(".xuanxian2").hide();
-
+            $(".option_cd").find('.back_img').css('background', 'url("images/gdxiala.png") #fff no-repeat 0 12px')
+            $(".option_cd").find('.id_name').css('color', 'rgba(3,18,54,1)')
         }
     });
 

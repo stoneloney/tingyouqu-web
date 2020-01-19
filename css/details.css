@@ -189,9 +189,15 @@ opacity:0.8;
     /* right: 0; */
     left: 390px;
 }
+.explain_a .mone{
+    font-size:24px;
+font-weight:400;
+color:rgba(255,62,42,1);
+margin-top: 15px;
+}
 .explain_a p:nth-child(1){
     font-size:24px;
-
+    height: 35px;
 }
 .explain_a p:nth-child(2){
     font-size:16px;
@@ -248,7 +254,7 @@ opacity:0.8;
       left: 24px;
   }
 .specification{
-    width: 1120px;
+    width: 900px;
     padding-bottom: 14px;
     margin-left: 40px;
     font-size:16px;
@@ -269,7 +275,7 @@ color:rgba(0,21,62,1);
 font-weight:400;
 margin-top: 15px;
 overflow: hidden;
-margin-bottom: 35px;
+margin-bottom: 28px;
 }
 .model_a{
  
@@ -284,15 +290,41 @@ line-height:36px;
 text-overflow:ellipsis; 
 white-space:nowrap;
 }
+.model_a li:nth-child(n+8){
+    display: none;
+}
+.model_b li:nth-child(n+8){
+    display: none;
+    /* display: block; */
+}
 .model_b{
     margin-left: 53px;
     color:rgba(0,21,65,1);
     line-height:36px;
+    overflow: hidden;
     }
-
+.more{
+    text-align: center;
+    font-size:14px;
+font-family:Microsoft YaHei;
+font-weight:400;
+color:rgba(0,21,65,1);
+cursor:pointer;
+}
+.sdsd{
+    width:900px;
+height:1px;
+background:rgba(221,227,241,1);
+margin-left: 40px;
+margin-top: 30px;
+margin-bottom: 35px;
+}
     .letter{
+        width: 900px;
         margin-top: 10px;
         margin-left: 40px;
+        
+
         padding-bottom: 65px ;
         /* font-size:14px;
 font-weight:400; */
@@ -315,7 +347,7 @@ color:rgba(0,21,65,1);
     .other_list li{
         float: left;
         width: 235px;
-        height: 314px;
+        height: 369px;
         background:rgba(255,255,255,1);
         border-radius:5px;
         font-weight:400;
@@ -339,18 +371,36 @@ text-align: center;
         width: 220px;
         margin: auto;
         font-size:16px;
-        margin-top: 46px;
+        margin-top: 35px;
     }
     .other_list li p:nth-child(3){
         font-size:12px;
         margin-top: 12px;
+    }
+    .imgcc{
+        width: 235px;
+        height: 191px;
+        border-radius:5px 5px 0px 0px; 
     }
     .other_list li img{
         width: 235px;
         height: 191px;
         border-radius:5px 5px 0px 0px;
     }
-
+    .ck{
+        font-size:14px;
+font-family:Microsoft YaHei;
+font-weight:400;
+color:rgba(0,21,65,1);
+margin-top: 12px;
+    }
+    .mone{
+        font-size:16px;
+        font-family:Microsoft YaHei;
+        font-weight:400;
+        color:rgba(255,62,42,1);  
+        margin-top: 7px;
+    }
     #vclose {
         /* width: 1200px; */
         width: 22px;

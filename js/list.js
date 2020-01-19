@@ -44,14 +44,31 @@ $(function () {
     //渲染数据
     function create1(res) {
         var productList = res.data.productList
+        console.log(productList);
+        var productsParams = [];
+        for (var i in productList) {
+          console.log(productList[i].model);
+        //   productsParams[i] = []
+        //   for (var j = 0, len = params[i].length; j < len; j++) {
+            // console.log(j)
+           productsParams.push(productList[i].model == "null" ? '--' : productList[i])
+     
+        //  }
+        }
+        console.log(productsParams);
         var productList = productList.map(function (item) {
             var img1 = (item.images)[0];//切割图片
+            if(item.model == null){
+              item.model = ''
+            }
             return `
             <li data-id="${item.id}">
                   <div class="div_img"><img class="list_img" src="http://118.25.191.234${img1}" alt=""></div>
-                        <p class="tex1">${item.name}</p>
-                        <p class="tex2">${item.brandName}</p>
-                        <img class="tex3" src="http://118.25.191.234${item.brandImage}" alt="">
+                        <p class="tex1">${item.model}</p>
+                        <p class="tex2">${item.name}</p>                     
+                        <div class="tex3_a"><img class="tex3" src="http://118.25.191.234${item.brandImage}" alt="">  </div>
+                        <p class="ck">参考价</p>
+                        <p class="tex4">￥${item.price/10000}万</p>
                     </li>`;
         }).join("");
         $(".list_a").html(productList);
@@ -275,14 +292,20 @@ $(".quxiao").click(function(){
                 }
                 var productList = res.data.map(function (item) {
                     var img1 = (item.images)[0];//切割图片
+                    if(item.model == null){
+                        item.model = ''
+                      }
                     return `
                     <li data-id="${item.id}">
                           <div class="div_img"><img class="list_img" src="http://118.25.191.234${img1}" alt=""></div>
-                                <p class="tex1">${item.name}</p>
-                                <p class="tex2">${item.brandName}</p>
-                                <img class="tex3" src="http://118.25.191.234${item.brandImage}" alt="">
+                                <p class="tex1">${item.model}</p>
+                                <p class="tex2">${item.name}</p>
+                                <div class="tex3_a"><img class="tex3" src="http://118.25.191.234${item.brandImage}" alt="">  </div>
+                                <p class="ck">参考价</p>
+                                <p class="tex4">￥${item.price/10000}万</p>
                             </li>`;
                 }).join("");
+              
                 $(".list_a").html(productList);
                 count = Math.ceil(res.count / pagenum);
                 console.log(count)
@@ -354,12 +377,17 @@ $(".quxiao").click(function(){
                 }
                 var productList = res.data.map(function (item) {
                     var img1 = (item.images)[0];//切割图片
+                    if(item.model == null){
+                        item.model = ''
+                      }
                     return `
                     <li data-id="${item.id}">
                           <div class="div_img"><img class="list_img" src="http://118.25.191.234${img1}" alt=""></div>
-                                <p class="tex1">${item.name}</p>
-                                <p class="tex2">${item.brandName}</p>
-                                <img class="tex3" src="http://118.25.191.234${item.brandImage}" alt="">
+                                <p class="tex1">${item.model}</p>
+                                <p class="tex2">${item.name}</p>
+                                <div class="tex3_a"><img class="tex3" src="http://118.25.191.234${item.brandImage}" alt="">  </div>
+                                <p class="ck">参考价</p>
+                                <p class="tex4">￥${item.price/10000}万</p>
                             </li>`;
                 }).join("");
                 $(".list_a").html(productList);

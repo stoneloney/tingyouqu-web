@@ -56,7 +56,7 @@ $(function () {
 
         $(".letter_a").html(list_content);
     }
- 
+
     function image_list(res) {
         var image_list = []
         var list_img = res.data.product[0].images.slice(0,8)
@@ -68,7 +68,6 @@ $(function () {
         console.log(res)
         console.log(list_img)
         var image_list = list_img.map(function (item) {
-            console.log(item)
             return `          <div class="cover">
             <img class="tupian" src="http://118.25.191.234${item}" alt="">
             <div class="img-title">
@@ -86,17 +85,24 @@ $(function () {
         var list_product = res.data.product
         console.log(list_product)
         var list_name = list_product.map(function (item) {
+            if(item.model == null){
+                item.model = ''
+              }
             return `
-                 <p>${item.name}</p>
-                  <p>${item.brandName}</p>
-                <img class="shanbiao" src="http://118.25.191.234${item.brandImage}" alt="">`;
+                 <p>${item.model}</p>
+                  <p>${item.name}</p>
+                <img class="shanbiao" src="http://118.25.191.234${item.brandImage}" alt="">
+                <div class="mone">￥${item.price/10000}万</div>`;
         }).join("");
         $(".explain_a").html(list_name);
     }
     function params(res){
         var params = res.data.params
-        console.log(params);
-
+        console.log(Object.keys(params).length);
+        if((Object.keys(params).length) < 7){
+            $('.more').css("display","none")
+            $('.sdsd').css("display","none")
+        }
         var productsParams = {};
         for (var i in params) {
           console.log(typeof(params[i]));
@@ -107,19 +113,21 @@ $(function () {
      
         //  }
         }
+        console.log(params);
         console.log(productsParams);
 
         con = "";
         coc= ""
              $.each(productsParams, function(index, item){
-               con += "<li>"+index+"</li>";
+               con += "<li class='idxx'>"+index+"</li>";
             });
             $.each(productsParams, function(index, item){
-                coc += "<li>"+item+"</li>";
+                coc += "<li class='itmm'>"+item+"</li>";
              });
             $(".model_a").html(con); //把内容入到这个div中即完成
             $(".model_b").html(coc); //把内容入到这个div中即完成
     }
+    
     $.ajax({
         type: "get",
         url: "http://118.25.191.234/tingyouqu/product/guess",
@@ -136,9 +144,11 @@ $(function () {
             var rel = love_list.map(function (item) {
                 var img = (item.images).split(",")[0];//切割图片
                 return `     <li data-id="${item.id}">
-                <img src="http://118.25.191.234${img}" alt="">
+                <div class="imgcc"><img src="http://118.25.191.234${img}" alt=""></div>
                 <p>${item.name}</p>
                 <p>${item.brandName}</p>
+                <p class="ck">参考价</p>
+                <p class="mone">￥${item.price/10000}万</p>
                     </li>`;
             }).join("");
             // console.log(rel);
@@ -146,7 +156,21 @@ $(function () {
         }
 
     })
-   
+    $(".more").on("click", function () {
+        // console.log('uid');:gt(index)
+     
+        if ($(".idxx:gt(7)").css("display") == "none") {
+            $('.idxx:gt(7)').show(600)
+            $('.itmm:gt(7)').show(600)
+            $(".imcg").attr("src","images/cs2.png");
+        }else{
+            $('.idxx:gt(7)').hide(600)
+            $('.itmm:gt(7)').hide(600)
+            $(".imcg").attr("src","images/cs1.png");
+        }
+          console.log($('.idxx:gt(7)'))
+
+    })
     $(".other_list").on("click", "li", function () {
         // var uid = this.getAttribute('data-id');  
         var uid = $(this).attr("data-id");

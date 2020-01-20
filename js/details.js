@@ -98,30 +98,33 @@ $(function () {
     }
     function params(res){
         var params = res.data.params
-        console.log(Object.keys(params).length);
-        if((Object.keys(params).length) < 7){
+    
+        // var productsParams = {};
+        for(var key in params) {
+            if(params[key] === '' || params[key]=== 'null'|| params[key]== null) {
+              delete params[key]
+            }
+         }
+         if((Object.keys(params).length) < 7){
             $('.more').css("display","none")
             $('.sdsd').css("display","none")
         }
-        var productsParams = {};
-        for (var i in params) {
-          console.log(typeof(params[i]));
-          productsParams[i] = []
-        //   for (var j = 0, len = params[i].length; j < len; j++) {
-            // console.log(j);
-           productsParams[i].push(params[i] == "null" || params[i] == "" ? '--' : params[i])
+        // for (var i in params) {
+        //   console.log((params[i]));  
+        //   productsParams[i] = []
+        //    productsParams[i].push(params[i] == "null" || params[i] == "" ? '--' : params[i])
      
-        //  }
-        }
+        // //  }
+        // }
         console.log(params);
-        console.log(productsParams);
+        // console.log(productsParams);
 
         con = "";
         coc= ""
-             $.each(productsParams, function(index, item){
-               con += "<li class='idxx'>"+index+"</li>";
+             $.each(params, function(index, item){
+               con += "<li class='idxx'><div> "+index+"</li>";
             });
-            $.each(productsParams, function(index, item){
+            $.each(params, function(index, item){
                 coc += "<li class='itmm'>"+item+"</li>";
              });
             $(".model_a").html(con); //把内容入到这个div中即完成
@@ -143,10 +146,13 @@ $(function () {
             console.log(love_list)
             var rel = love_list.map(function (item) {
                 var img = (item.images).split(",")[0];//切割图片
+                if(item.model == null){
+                    item.model = ''
+                  }
                 return `     <li data-id="${item.id}">
                 <div class="imgcc"><img src="http://118.25.191.234${img}" alt=""></div>
+                <p>${item.model}</p>
                 <p>${item.name}</p>
-                <p>${item.brandName}</p>
                 <p class="ck">参考价</p>
                 <p class="mone">￥${item.price/10000}万</p>
                     </li>`;

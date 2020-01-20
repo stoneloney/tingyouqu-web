@@ -372,6 +372,7 @@ text-align: center;
         margin: auto;
         font-size:16px;
         margin-top: 35px;
+        height: 19px;
     }
     .other_list li p:nth-child(3){
         font-size:12px;
@@ -392,7 +393,7 @@ text-align: center;
 font-family:Microsoft YaHei;
 font-weight:400;
 color:rgba(0,21,65,1);
-margin-top: 12px;
+margin-top: 22px;
     }
     .mone{
         font-size:16px;

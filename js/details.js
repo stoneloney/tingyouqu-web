@@ -12,7 +12,7 @@ $(function () {
     $(".list_h2").html(name+">");
     $.ajax({
         type: "get",
-        url: "http://118.25.191.234/tingyouqu/product/detail",
+        url: "http://chinaboatfun.com/api/product/detail",
         dataType: "json",
         data: {
             id: uid
@@ -37,7 +37,7 @@ $(function () {
     //     var list_product = list_product.map(function (item) {
     //         var img1 = (item.images)[0];//切割图片
     //         return `
-    //         <img class="tupian" src="http://118.25.191.234${img1}" alt="">       
+    //         <img class="tupian" src="http://chinaboatfun.com${img1}" alt="">       
     //         <div class="img-title">
     //             <img src="images/suosuo2.png" alt="">
     //             <div>查看图片</div>
@@ -69,7 +69,7 @@ $(function () {
         console.log(list_img)
         var image_list = list_img.map(function (item) {
             return `          <div class="cover">
-            <img class="tupian" src="http://118.25.191.234${item}" alt="">
+            <img class="tupian" src="http://chinaboatfun.com${item}" alt="">
             <div class="img-title">
                 <img style="width: 28px;height: 28px;" src="images/suosuo2.png" alt="">
                 <div>查看图片</div>
@@ -91,7 +91,7 @@ $(function () {
             return `
                  <p>${item.model}</p>
                   <p>${item.name}</p>
-                <img class="shanbiao" src="http://118.25.191.234${item.brandImage}" alt="">
+                <img class="shanbiao" src="http://chinaboatfun.com${item.brandImage}" alt="">
                 <div class="mone">￥${item.price/10000}万</div>`;
         }).join("");
         $(".explain_a").html(list_name);
@@ -133,7 +133,7 @@ $(function () {
     
     $.ajax({
         type: "get",
-        url: "http://118.25.191.234/tingyouqu/product/guess",
+        url: "http://chinaboatfun.com/api/product/guess",
         dataType: "json",
         data: {
             id: uid,
@@ -150,7 +150,7 @@ $(function () {
                     item.model = ''
                   }
                 return `     <li data-id="${item.id}">
-                <div class="imgcc"><img src="http://118.25.191.234${img}" alt=""></div>
+                <div class="imgcc"><img src="http://chinaboatfun.com${img}" alt=""></div>
                 <p>${item.model}</p>
                 <p>${item.name}</p>
                 <p class="ck">参考价</p>

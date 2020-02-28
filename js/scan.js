@@ -6,10 +6,10 @@ $(function () {
     }
 
     var orderno = $.getUrlParam('orderno');
-
+console.log(orderno)
     $.ajax({
         type: "post",
-        url: "http://chinaboatfun.com/api/member/ticketDetail",
+        url: "http://118.25.191.234/tingyouqu/member/ticketDetail",
         dataType: "json",
         data: {
             orderno: orderno

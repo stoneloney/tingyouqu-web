@@ -7,6 +7,7 @@ html{
 }
 body {
     font-size: 16px;
+    overflow-y:hidden;
 }
 ul,li{
     list-style: none;
@@ -144,6 +145,7 @@ text{
     overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+  -webkit-box-orient: vertical;
   }
   .pp{
     display: inline-block;

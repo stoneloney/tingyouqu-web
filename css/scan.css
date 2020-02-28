@@ -137,3 +137,14 @@ text{
   .trunk_b div:nth-child(3){
     margin-top: .266667rem;
   }
+
+  .piaoz{
+    display: inline-block;
+      width: 2rem;
+    overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  }
+  .pp{
+    display: inline-block;
+  }

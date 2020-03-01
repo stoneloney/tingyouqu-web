@@ -37,7 +37,7 @@ console.log(id)
         var activity = res.data.activity
         var str = "<div>";
         str += "<div class='h1'>" + activity.name + "</div>";
-        str += "<div class='shijian top'><img src='images/shijian.png' alt=''><div>" + activity.endtime + '～' + activity.starttime + "</div></div>"
+        str += "<div class='shijian top'><img src='images/shijian.png' alt=''><div>" + activity.starttime + '～' + activity.endtime + "</div></div>"
 
         str += "<div class='shijian top2'><img src='images/dizhi.png' alt=''><div>" + activity.province + '' + activity.city + '' + activity.address + "</div></div>"
 

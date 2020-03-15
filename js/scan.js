@@ -22,10 +22,13 @@ console.log(id)
             create2(res)
             create3(res)
             if(res.data.ticket.coupon_code[id].status == 0){
-                var stt = "<text class='piao'>" + '有效票' + "</text>"
+                var stt = "<text class='piao'>" + '未使用' + "</text>"
+                $(".zt").append(stt);
+            }else if(res.data.ticket.coupon_code[id].status == 1){
+                var stt = "<text class='piao'>" + '已使用' + "</text>"
                 $(".zt").append(stt);
             }else{
-                var stt = "<text class='piao'>" + '无效票' + "</text>"
+                var stt = "<text class='piao'>" + '已过期' + "</text>"
                 $(".zt").append(stt);
             }
         }

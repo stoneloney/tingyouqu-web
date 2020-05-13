@@ -1,4 +1,7 @@
 $(function () {
+    let url = 'http://118.25.191.234/tingyouqu'
+    // let url = 'http://chinaboatfun.com/api'
+    // 图片：http://chinaboatfun.com
     $.getUrlParam = function (name) {
         var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
         var r = window.location.search.substr(1).match(reg);
@@ -12,7 +15,7 @@ $(function () {
     $(".list_h2").html(name+">");
     $.ajax({
         type: "get",
-        url: "http://chinaboatfun.com/api/product/detail",
+        url: url + "/product/detail",
         dataType: "json",
         data: {
             id: uid
@@ -69,7 +72,7 @@ $(function () {
         console.log(list_img)
         var image_list = list_img.map(function (item) {
             return `          <div class="cover">
-            <img class="tupian" src="http://chinaboatfun.com${item}" alt="">
+            <img class="tupian" src="http://118.25.191.234${item}" alt="">
             <div class="img-title">
                 <img style="width: 28px;height: 28px;" src="images/suosuo2.png" alt="">
                 <div>查看图片</div>
@@ -91,7 +94,7 @@ $(function () {
             return `
                  <p>${item.model}</p>
                   <p>${item.name}</p>
-                <img class="shanbiao" src="http://chinaboatfun.com${item.brandImage}" alt="">
+                <img class="shanbiao" src="http://118.25.191.234${item.brandImage}" alt="">
                 <div class="mone">￥${item.price/10000}万</div>`;
         }).join("");
         $(".explain_a").html(list_name);
@@ -133,7 +136,7 @@ $(function () {
     
     $.ajax({
         type: "get",
-        url: "http://chinaboatfun.com/api/product/guess",
+        url: url + "/product/guess",
         dataType: "json",
         data: {
             id: uid,
@@ -150,7 +153,7 @@ $(function () {
                     item.model = ''
                   }
                 return `     <li data-id="${item.id}">
-                <div class="imgcc"><img src="http://chinaboatfun.com${img}" alt=""></div>
+                <div class="imgcc"><img src="http://118.25.191.234${img}" alt=""></div>
                 <p>${item.model}</p>
                 <p>${item.name}</p>
                 <p class="ck">参考价</p>

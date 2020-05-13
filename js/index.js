@@ -1,7 +1,12 @@
 $(function(){
+    let url = 'http://118.25.191.234/tingyouqu'
+    let http = 'http://118.25.191.234'
+    // let url = 'http://chinaboatfun.com/api'
+    // let http = 'http://chinaboatfun.com'
+    // 图片：http://chinaboatfun.com
     $.ajax({
         type: "get",
-        url: "http://chinaboatfun.com/api/channel/index",
+        url: url+"/channel/index",
         dataType: "json",
         success: function (res) {
             console.log(res);
@@ -15,7 +20,7 @@ $(function(){
         var index_list = res.map(function (item) {
             console.log(item);
             return `               <li class="img" data-id="${item.id}" data-name="${item.name}">
-            <img class="img_a" src="http://chinaboatfun.com${item.image}" alt="">
+            <img class="img_a" src="${http}${item.image}" alt="">
             <div class="name">${item.name}</div>
             <div class="img-title">
                 <img src="images/suosuo2.png" alt="">

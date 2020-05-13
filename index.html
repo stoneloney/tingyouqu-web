@@ -6,41 +6,131 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>艇有趣</title>
+    <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/style.css">
+    <!-- 登录弹窗 -->
+    <link rel="stylesheet" href="css/g.css">
 </head>
-<style>
-    body {
-
-
-        overflow: hidden;
-        background: #0060ff;
-        color: #fff;
-    }
-
-    .yt {
-        /* position: relative; */
-        height: 100%;
-        width: 100%;
-        vertical-align:middle;
-    }
-
-    .img {
-        vertical-align:middle; 
-        position:absolute; 
-         left: 0;
-        top: 50%;
-        transform:translate(-0%,-50%);
-        background-repeat: no-repeat;
-        /* height: 800px; */
-    width: 100%;
-    }
-</style>
 
 <body>
-    <div class="yt">
-        <img class="img" src="images/8c12712ff9c242352989aac45cdc5aa.jpg" alt="">
+     <!-- 头部 -->
+    <div class="mian">
+        <div class="hed navbar">
+            <div class="logo fl"> 
+                <a href="index.html"><img src="images/logo.png" alt=""></a>
+            </div>
+            <div class="input fl">
+                <input type="text" class="inpt" placeholder="上万种航海产品，等你来搜！">
+                <div class="shousuo"> <img src="images/sousuo3.png" alt=""></div>
+
+            </div>
+            <div class="reg fr">
+                <!-- <div class="login">
+                    <a href="javascript:;" class="evaluate-btn">登录</a>
+                 
+                </div> -->
+                <!-- <div class="mien">
+                    <a href="About.html">关于我们</a>
+                </div> -->
+            </div>
+        </div>
+        <div class="biaoti">
+            <div class="biaoti1">我们只做一件事</div>
+            <div class="biaoti2">让更多的人看到海洋的美</div>
+        </div>
+
+        <!-- 轮播图 -->
+        <div class="slide" id="slide">
+            <div class="pb-carouselWarp demo1">
+                <ul class="pb-carousel">
+                    <li class="pb-this">
+                        <img src="images/1.png" alt="" />
+                    </li>
+                    <!-- <li>
+                        <img src="images/1.png" alt="" />
+                    </li>
+                    <li>
+                        <img src="images/1.png" alt="" />
+                    </li> -->
+                </ul>
+                <!-- <ul class="pb-carousel-ind">
+                    <li class="pb-this"></li>
+                    <li></li>
+                    <li></li>
+                </ul> -->
+                <!-- <button class="pb-arrow pb-arrow-prev"></button>
+                <button class="pb-arrow pb-arrow-next" id="aa"></button> -->
+            </div>
+        </div>
     </div>
 
+    <div class="total">
+        <div class="h1">
+            <div>满意的国际采购，从这里开始！</div>
+            <div>上万种航海产品，等你来搜！</div>
+        </div>
+
+        <div class="sousuo">
+            <input type="text" class="inpt2" placeholder="品牌/产品型号/关键词">
+            <div class="shousuo2"><img src="images/sousuo.png" alt=""></div>
+        </div>
+
+        <div class="list">
+            <ul class="list_ul">
+               <!-- <a href="list.html">
+                        <li class="img" >
+                                <img class="img_a" src="images/list1.png" alt="">
+                                <div class="name">游艇</div>
+                                <div class="img-title">
+                                    <img src="images/suosuo2.png" alt="">
+                                    <div>游艇</div>
+                                </div>
+                            </li>
+                </a> -->
+             
+
+
+            </ul>
+        </div>
+    </div>
+<!-- 底部 -->
+<div class="bottom">
+    <div class="base">
+        <ul class="bot1 bot2">
+            <li class="h2">联系方式</li>
+            <li>电话：188-1436-5878</li>
+            <li>地址：深圳市南山区粤海街道高新南环路</li>
+        </ul>
+        <ul class="bot1">
+            <!-- <li class="h2"><a href="About.html" style="color: rgba(128,139,163,1);">关于我们</a></li>
+                <li ><a href="About.html" style="color: rgba(128,139,163,1);">公司简介</a></li>
+            <li><a href="About.html" style="color: rgba(128,139,163,1);">联系我们</a></li> -->
+        </ul>
+        <ul class="bot3">
+            <li class="h3"><img src="images/ewm.png" alt=""></li>
+            <li>微信公众号</li>
+        </ul>
+    </div>
+
+</div>
+<div class="bottom3"></div>
+<div class="bottom2">
+    <div class="beian">Copyright© 2017 深圳市艇有趣科技有限公司 保留所有版权 备案号：粤ICP备18080471号</div>
+</div>
+  
+
+    
 </body>
+
+<script src="js/jquery-1.10.1.min.js"></script>
+<!-- <script src="/js/jquery.min.js" type="text/javascript" charset="utf-8"></script> -->
+<!-- 轮播图 -->
+<script src="js/carousel.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/index.js"></script>
+<!-- 登录js -->
+<!-- <script src="js/zhezao.js"></script>
+<script src="js/shousuo.js"></script> -->
+
 
 </html>

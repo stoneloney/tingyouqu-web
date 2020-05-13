@@ -1,4 +1,9 @@
 $(function () {
+    let url = 'http://118.25.191.234/tingyouqu'
+    let http = 'http://118.25.191.234'
+    // let url = 'http://chinaboatfun.com/api'
+    // let http = 'http://chinaboatfun.com'
+   
     $.getUrlParam = function (name) {
         var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
         var r = window.location.search.substr(1).match(reg);
@@ -18,7 +23,7 @@ $(function () {
     function init(page) {
         $.ajax({
             type: "get",
-            url: "http://chinaboatfun.com/api/product/index",
+            url: url+"/product/index",
             dataType: "json",
             async: false,
             data: {
@@ -63,10 +68,10 @@ $(function () {
             }
             return `
             <li data-id="${item.id}">
-                  <div class="div_img"><img class="list_img" src="http://chinaboatfun.com${img1}" alt=""></div>
+                  <div class="div_img"><img class="list_img" src="${http}${img1}" alt=""></div>
                         <p class="tex1">${item.model}</p>
                         <p class="tex2">${item.name}</p>                     
-                        <div class="tex3_a"><img class="tex3" src="http://chinaboatfun.com${item.brandImage}" alt="">  </div>
+                        <div class="tex3_a"><img class="tex3" src="${http}${item.brandImage}" alt="">  </div>
                         <p class="ck">参考价</p>
                         <p class="tex4">￥${item.price/10000}万</p>
                     </li>`;
@@ -268,7 +273,7 @@ $(".quxiao").click(function(){
 
         $.ajax({
             type: "get",
-            url: "http://chinaboatfun.com/api/product/screen?" + params,
+            url: url+"/product/screen?" + params,
             dataType: "json",
             async: false,
             data: {
@@ -297,10 +302,10 @@ $(".quxiao").click(function(){
                       }
                     return `
                     <li data-id="${item.id}">
-                          <div class="div_img"><img class="list_img" src="http://chinaboatfun.com${img1}" alt=""></div>
+                          <div class="div_img"><img class="list_img" src="${http}${img1}" alt=""></div>
                                 <p class="tex1">${item.model}</p>
                                 <p class="tex2">${item.name}</p>
-                                <div class="tex3_a"><img class="tex3" src="http://chinaboatfun.com${item.brandImage}" alt="">  </div>
+                                <div class="tex3_a"><img class="tex3" src="${http}${item.brandImage}" alt="">  </div>
                                 <p class="ck">参考价</p>
                                 <p class="tex4">￥${item.price/10000}万</p>
                             </li>`;
@@ -353,7 +358,7 @@ $(".quxiao").click(function(){
 
         $.ajax({
             type: "get",
-            url: "http://chinaboatfun.com/api/product/screen?" + params,
+            url: url+"/product/screen?" + params,
             dataType: "json",
             async: false,
             data: {
@@ -382,10 +387,10 @@ $(".quxiao").click(function(){
                       }
                     return `
                     <li data-id="${item.id}">
-                          <div class="div_img"><img class="list_img" src="http://chinaboatfun.com${img1}" alt=""></div>
+                          <div class="div_img"><img class="list_img" src="${http}${img1}" alt=""></div>
                                 <p class="tex1">${item.model}</p>
                                 <p class="tex2">${item.name}</p>
-                                <div class="tex3_a"><img class="tex3" src="http://chinaboatfun.com${item.brandImage}" alt="">  </div>
+                                <div class="tex3_a"><img class="tex3" src="${http}${item.brandImage}" alt="">  </div>
                                 <p class="ck">参考价</p>
                                 <p class="tex4">￥${item.price/10000}万</p>
                             </li>`;

@@ -1,4 +1,9 @@
 $(function () {
+    //票券核实
+    let url = 'http://118.25.191.234/tingyouqu'
+    let http = 'http://118.25.191.234'
+    // let url = 'http://chinaboatfun.com/api'
+    // let http = 'http://chinaboatfun.com'
     $.getUrlParam = function (name) {
         var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
         var r = window.location.search.substr(1).match(reg);
@@ -11,7 +16,7 @@ console.log(orderno)
 console.log(id)
     $.ajax({
         type: "post",
-        url: "http://118.25.191.234/tingyouqu/member/ticketDetail",
+        url: url+"/member/ticketDetail",
         dataType: "json",
         data: {
             orderno: orderno
